@@ -30,6 +30,7 @@ jobs:
       - name: Run server
         run: npm start
              npx wait-on http://192.168.0.108:$PORT
+        working-directory: 01 Starting Project    
       - name: Run tests
         run: npm test
         working-directory: 01 Starting Project
