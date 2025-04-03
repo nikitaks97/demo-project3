@@ -11,8 +11,7 @@ jobs:
     env:
       MONGODB_DB_PASSWORD: yPRemiC11OwdYM7Z
       MONGODB_DB_USERNAME: nikitaks9997
-      MONGODB_CLUSTER_ADDRESS: mongodb+srv://nikitaks997:yPRemiC11OwdYM7Z@cluster0.xrttj.mongodb.net/?retryWrites=true&w=majority
-      PORT: 8083
+      MONGODB_CLUSTER_ADDRESS: cluster0.xrttj.mongodb.net
     environment: testing
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +27,7 @@ jobs:
         run: npm ci
         working-directory: 01 Starting Project
       - name: Run server
-        run: npm start & npx wait-on http://192.168.0.108
+        run: npm start & npx wait-on http://192.168.0.108:$PORT
         working-directory: 01 Starting Project
       - name: Run tests
         run: npm test
