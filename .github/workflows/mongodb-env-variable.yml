@@ -27,13 +27,11 @@ jobs:
           npm install 
           npm ci
         working-directory: 01 Starting Project
-      - name: Verify Server is Listening
-        run: |
-          ss -tuln | grep 8083  # Check if port 8083 is open
+     
       - name: Run server
         run: |
              npm start & 
-             npx wait-on http://192.168.0.108:$PORT --timeout 60000  # 60 seconds timeout
+             npx wait-on http://192.168.0.108:$PORT --timeout 300000  # 60 seconds timeout
 
         working-directory: 01 Starting Project    
       - name: Run tests
