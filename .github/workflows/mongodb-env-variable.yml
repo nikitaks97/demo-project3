@@ -27,6 +27,9 @@ jobs:
           npm install 
           npm ci
         working-directory: 01 Starting Project
+      - name: Verify Server is Listening
+        run: |
+          netstat -tuln | grep 8083  # Check if port 8083 is open
       - name: Run server
         run: |
              npm start & 
