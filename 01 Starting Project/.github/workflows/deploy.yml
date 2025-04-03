@@ -1,4 +1,4 @@
-name: Deployment
+name: Deployment to Mongodb
 on:
   push:
     branches:
