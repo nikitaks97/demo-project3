@@ -9,8 +9,8 @@ env:
 jobs:
   test:
     env:
-      MONGODB_DB_PASSWORD: yPRemiC11OwdYM7Z
-      MONGODB_DB_USERNAME: nikitaks997
+      MONGODB_PASSWORD: yPRemiC11OwdYM7Z
+      MONGODB_USERNAME: nikitaks997
       MONGODB_CLUSTER_ADDRESS: cluster0.xrttj.mongodb.net
     environment: testing
     runs-on: ubuntu-latest
