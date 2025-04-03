@@ -22,7 +22,6 @@ jobs:
         with:
           path: ~/.npm
           key: npm-deps-${{ hashFiles('**/package-lock.json') }}
-          working-directory: 01 Starting Project
       - name: Install dependencies
         run: npm ci
         working-directory: 01 Starting Project
