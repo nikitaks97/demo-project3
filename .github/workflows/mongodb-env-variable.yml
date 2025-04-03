@@ -11,7 +11,7 @@ jobs:
     env:
       MONGODB_DB_PASSWORD: yPRemiC11OwdYM7Z
       MONGODB_DB_USERNAME: nikitaks9997
-      MONGODB_CLUSTER_ADDRESS: mongodb+srv://nikitaks997:<db_password>@cluster0.xrttj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      MONGODB_CLUSTER_ADDRESS: mongodb+srv://nikitaks997:yPRemiC11OwdYM7Z@cluster0.xrttj.mongodb.net/?retryWrites=true&w=majority
       PORT: 8083
     environment: testing
     runs-on: ubuntu-latest
