@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - dev
 env:
   MONGODB_DB_NAME: gh-demo
 jobs:
@@ -12,6 +11,7 @@ jobs:
       MONGODB_PASSWORD: yPRemiC11OwdYM7Z
       MONGODB_USERNAME: nikitaks997
       MONGODB_CLUSTER_ADDRESS: cluster0.xrttj.mongodb.net
+      PORT: 8083
     environment: testing
     runs-on: ubuntu-latest
     steps:
@@ -28,8 +28,11 @@ jobs:
           npm ci
         working-directory: 01 Starting Project
       - name: Run server
-        run: npm start
-             npx wait-on http://192.168.0.108:$PORT
+        run: |
+          npm start & npx wait-on http://192.168.0.108:$PORT
+          env:
+            PORT: 8083  # or whatever port you're using
+
         working-directory: 01 Starting Project    
       - name: Run tests
         run: npm test
