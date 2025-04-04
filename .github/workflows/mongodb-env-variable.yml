@@ -30,6 +30,7 @@ jobs:
      
       - name: Run server
         run: |
+             npm install -g wait-on
              npm start & 
              npx wait-on http://192.168.0.108:$PORT --timeout 300000  # 60 seconds timeout
 
